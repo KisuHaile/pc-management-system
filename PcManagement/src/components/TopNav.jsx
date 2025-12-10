@@ -6,12 +6,12 @@ export default function TopNav() {
     const sidenav = document.querySelector('.sb-sidenav');
     const content = document.getElementById('layoutSidenav_content');
 
-    const toggle = () => {
+    const toggleSidebar = () => {
       sidenav.classList.toggle('open');
       content.classList.toggle('sidebar-open');
     };
-    sidebarToggle.addEventListener('click', toggle);
-    return () => sidebarToggle.removeEventListener('click', toggle);
+    sidebarToggle.addEventListener('click', toggleSidebar);
+    return () => sidebarToggle.removeEventListener('click', toggleSidebar);
   }, []);
 
   return (
@@ -24,23 +24,28 @@ export default function TopNav() {
       </div>
 
       <div className="flex items-center space-x-4">
-        <form className="hidden md:block">
-          <div className="flex">
-            <input type="text" placeholder="Search for..." className="px-4 py-2 rounded-l bg-gray-800 text-white border-none" />
-            <button type="button" className="px-4 bg-blue-600 rounded-r">
-              <i className="fas fa-search"></i>
-            </button>
-          </div>
-        </form>
+  
 
+        {/* Profile dropdown on hover */}
         <div className="relative group">
-          <button className="text-white text-xl">
-            <i className="fas fa-user fa-fw"></i>
+          <button className="flex items-center space-x-2 text-white">
+            <i className="fas fa-user fa-lg"></i>
+            <span className="hidden md:block">John Doe</span>
+            <i className="fas fa-angle-down ml-1"></i>
           </button>
-          <div className="absolute right-0 mt-2 w-48 bg-white rounded shadow-lg hidden group-hover:block">
-            <a href="#!" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Activity Log</a>
+
+          {/* Dropdown menu */}
+          <div className="absolute right-0 mt-2 w-48 bg-white rounded shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200 z-50">
+            <a href="#!" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+              Profile
+            </a>
+            <a href="#!" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+              Activity Log
+            </a>
             <hr />
-            <a href="#!" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Logout</a>
+            <a href="#!" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+              Logout
+            </a>
           </div>
         </div>
       </div>
