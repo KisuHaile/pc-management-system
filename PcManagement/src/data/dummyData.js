@@ -32,12 +32,31 @@ export const usersData = [
     email: "john@example.com",
     password: "123456",
     Role: "Admin",
-    PCs: [
-      { pc_serial: "PC001", pc_name: "Office PC", pc_model: "Dell OptiPlex", additional_info: "1st Floor" },
-    ],
+  
+  },
+   {
+    id: 2,
+    User_name: "John Doe",
+    Gender: "Male",
+    Phone: "1234567890",
+    status: "Active",
+    email: "john@example.com",
+    password: "123456",
+    Role: "Admin",
+  },
+
+  {
+    id: 3,
+    User_name: "Alice Admin",
+    Gender: "Female",
+    Phone: "1122334455",
+    status: "Active",
+    email: "alice@example.com",
+    password: "pass123",
+    Role: "Admin",
   },
   {
-    id: 2,
+    id: 4,
     User_name: "Jane Smith",
     Gender: "Female",
     Phone: "0987654321",
@@ -45,7 +64,9 @@ export const usersData = [
     email: "jane@example.com",
     password: "abcdef",
     Role: "Staff",
-    PCs: [],
+      PCs: [
+      { pc_serial: "PC001", pc_name: "Office PC", pc_model: "Dell OptiPlex", additional_info: "1st Floor" },
+    ],
   },
 ];
 
