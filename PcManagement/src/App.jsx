@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import Permissions from "./pages/Permissions";
 import Roles from "./pages/Roles";
+import Admins from "./pages/Admins";
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -27,6 +28,7 @@ export default function App() {
               <Route path="/users" element={<Users />} />
               <Route path="/roles" element={<Roles />} />
               <Route path="/permissions" element={<Permissions />} />
+              <Route path="/admins" element={<Admins />} />
             </Routes>
           </main>
 
