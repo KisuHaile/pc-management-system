@@ -18,3 +18,7 @@ export let permissions = [
   { id: 2, name: "Register PC", description: "Allows user to register new PCs.", status: "Active" },
   { id: 3, name: "View Logs", description: "Can view user activity logs.", status: "Inactive" }
 ];
+export const admins = [
+  { id: 1, name: "John Admin", email: "john@example.com", password: "123456" },
+  { id: 2, name: "Jane Admin", email: "jane@example.com", password: "abcdef" },
+];
