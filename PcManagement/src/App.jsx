@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import TopNav from "./components/TopNav";
 import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
+import Permissions from "./pages/Permissions";
 
 export default function App() {
   return (
@@ -24,6 +25,8 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/users" element={<Users />} />
+              {/* <Route path="/roles" element={<Roles />} /> */}
+              <Route path="/permissions" element={<Permissions />} />
             </Routes>
           </main>
 
