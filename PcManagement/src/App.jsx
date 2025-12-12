@@ -56,8 +56,6 @@ export default function App() {
         <Route path="/permissions" element={<Permissions />} />
         <Route path="/admins" element={<Admins />} />
       </Route>
-
-      {/* Redirect unknown routes */}
       <Route path="*" element={<Navigate to="/login" />} />
     </Routes>
   );
